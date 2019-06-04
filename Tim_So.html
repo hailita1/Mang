@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let value = prompt("Nhập số cần tìm: ");
+    let check;
+    let x = [1, 2, 3, 9, 41, 100, 13];
+    for (let i = 0; i <= x.length; i++) {
+        if (x[i] == value) {
+            alert("Số " + x[i] + " ở vị trí " + i);
+        } else {
+            check = false;
+        }
+    }
+    if(check == false){
+        alert("Không có số muốn tìm");
+    }
+
+</script>
+</body>
+</html>
