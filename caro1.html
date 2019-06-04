@@ -12,7 +12,6 @@
 </center>
 <script>
     let board = document.getElementById("board");
-    let size = 10;
     let insertData = [];
     let data = "";
     for (let i = 0; i < 9; i++) {
@@ -27,18 +26,18 @@
     board.innerHTML = data;
 
     function changeValue() {
-        let positionX = prompt("X: ");
-        let positionY = prompt("Y: ");
+        let positionX = parseInt(prompt("X: "));
+        let positionY = parseInt(prompt("Y: "));
         data = "";
-        board[positionX][positionY] = "x";
-        for (let i = 0; i < 5; i++) {
+        insertData[positionX-1][positionY-1] = "x";
+        for (let i = 0; i < 9; i++) {
             data += "<br/>";
-            for (let j = 0; j < 5; j++) {
-                data += board[i][j] + "&nbsp;&nbsp;&nbsp;&nbsp;";
+            for (let j = 0; j < 9; j++) {
+                data += insertData[i][j] + "&nbsp;&nbsp;&nbsp;&nbsp;";
             }
         }
         data += "<br/><br/><input type='button' value='Change Value' onclick='changeValue()'>"
-        b.innerHTML = "<hr/>" + data;
+        board.innerHTML = "<hr/>" + data;
     }
 </script>
 </body>
