@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<center>
+    Please enter: <input type="text" id="english" style="font-size: 100%">
+    <button id="btntranslate" onclick="TranslatetoVietNamese()">Translate</button>
+    <p id="vietnamese"></p>
+</center>
+<script>
+    let english = ['hospital', 'hotel', 'stadium', 'police', 'libary'];
+    let vietnameseWord = ['bệnh viện', 'nhà nghỉ', 'sân vận động', 'đồn cảnh sát', 'thư viện'];
+
+    function TranslatetoVietNamese() {
+        let word = document.getElementById('english').value;
+        let translate = document.getElementById("vietnamese");
+        let vitri;
+        if (english.indexOf(word) !== -1) {
+            vitri = english.indexOf(word);
+            translate.innerHTML = vietnameseWord[vitri];
+        } else {
+            translate.innerHTML = "Không có trong từ điển";
+        }
+
+
+    }
+</script>
+</body>
+</html>
