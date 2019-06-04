@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let x = [];
+    let max = 0;
+    let index;
+    let n = parseInt(prompt("Nhập vào số phần tử của dãy "));
+    for (let i = 0; i < n; i++) {
+        x[i] = parseInt(prompt("Nhập vào phần tử " + (i + 1) + " của dãy "));
+        document.write(x[i] + " ");
+    }
+    for (let i = 0; i < n; i++) {
+        if (max < x[i]) {
+            max = x[i];
+            index = i;
+        }
+    }
+    document.write("<br/>");
+    document.write("Số lớn nhất của dãy là " + max + " ở vị trí thứ " + index);
+</script>
+</body>
+</html>
