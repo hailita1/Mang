@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyen tap mang 02</title>
+</head>
+<body>
+<script>
+    let a = [];
+    let b = [];
+    let check;
+    let n = prompt("Nhập vào số phần tử chuỗi 1");
+    for (let i = 0; i < n; i++) {
+        a[i] = prompt("Nhập phần tử thứ " + (i + 1));
+        document.write(a[i] + " ");
+    }
+    document.write("<br/>");
+    let m = prompt("Nhập vào số phần tử chuỗi 2");
+    for (let j = 0; j < m; j++) {
+        b[j] = prompt("Nhập phần tử tứ " + (j + 1));
+        document.write(b[j] + " ");
+    }
+    for (i = 0; i < n; i++) {
+        for (j = 0; j < m; j++) {
+            if (a[i] == b[j]) {
+                check = true;
+            } else {
+                check = false;
+            }
+        }
+    }
+    if (check == true) {
+        alert("Hai chuỗi giống nhau");
+    } else {
+        alert("Hai chuỗi khác nhau");
+    }
+</script>
+</body>
+</html>

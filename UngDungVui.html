@@ -2,9 +2,36 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Ung dung vui</title>
 </head>
 <body>
-$END$
+<center>
+    <h2>Type anthing slowly</h2>
+    <form name="f">
+        <textarea name="txt" rows="10" cols="40" onkeydown="hien_chuoi()"></textarea>
+    </form>
+</center>
+<script>
+    let a = ["T", "Ô", "I", " ", "L", "À", " ", "S", "I", "Ê", "U", " ", "N", "H", "Â", "N", " ", "!", "!", "!"];
+    let n = "";
+
+    function hien_chuoi() {
+        t = document.f.txt.value;
+        j = t.length;
+        if (j > 0) {
+            for (let i = 1; i < j; i++) {
+                n = n + a[i];
+                if (i == 20) {
+                    document.f.txt.value = "";
+                    n = "";
+                }
+            }
+        }
+        document.f.txt.value = n;
+        n = " ";
+        setTimeout("hien_chuoi()", 1);
+
+    }
+</script>
 </body>
 </html>
