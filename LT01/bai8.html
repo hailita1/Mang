@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mảng</title>
+</head>
+<body>
+<script>
+    let array = [];
+    document.write("Dãy số ban đầu là :");
+    for (let i = 0; i < 10; i++) {
+        array[i] = parseInt(prompt("Nhập vào phần tử thứ " + (i + 1)));
+        document.write(array[i] + " ");
+    }
+    document.write("<br/>");
+    let tg;
+    for (i = 0; i < 10 - 1; i++) {
+        for (let j = i + 1; j < 10; j++) {
+            if (array[i] < array[j]) {
+                tg = array[i];
+                array[i] = array[j];
+                array[j] = tg;
+            }
+
+        }
+    }
+    document.write("Dãy đã sắp xếp là: ");
+    for (i = 0; i < 10; i++) {
+        document.write(array[i] + " ");
+    }
+</script>
+</body>
+</html>
