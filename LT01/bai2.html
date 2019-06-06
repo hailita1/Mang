@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyen tap 01</title>
+</head>
+<body>
+<script>
+    let a = [];
+    let number;
+    let index;
+    for (let i = 0; i < 10; i++) {
+        a[i] = prompt("Nhập vào phần tử thứ " + (i + 1) + " của dãy");
+        if (a[i] >= 10) {
+            number = a[i];
+            index = i + 1;
+            document.write("Số " + number + " lớn hơn hoặc bằng 10, ở vị trí " + index + " trong dãy");
+            document.write("<br>");
+        }
+    }
+</script>
+</body>
+</html>

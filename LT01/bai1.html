@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyen tap 01</title>
+</head>
+<body>
+<script>
+    let a = [];
+    let cout = 0;
+    for (let i = 0; i < 10; i++) {
+        a[i] = prompt("Nhập vào phần tử thứ " + (i + 1) + " của dãy");
+        if (a[i] >= 10) {
+            document.write(a[i] + " ");
+            cout++;
+        }
+    }
+    document.write("<br>");
+    document.write("Có " + cout + " số lớn hơn hoặc bằng 10 trong dãy");
+</script>
+</body>
+</html>
