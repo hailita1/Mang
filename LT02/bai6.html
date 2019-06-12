@@ -6,9 +6,12 @@
 </head>
 <body>
 <script>
-    let a = [];
-    let n = prompt("Nhập vào số phần tử của mảng ");
-
+    let str = "Tran-Thanh-Hai";
+    let result = "";
+    for (let i = 0; i < str.length; i++) {
+        result += (str[i] == "-") ? "_" : str[i];
+    }
+    alert(result);
 </script>
 </body>
 </html>
