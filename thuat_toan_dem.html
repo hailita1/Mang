@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thuật toán đếm</title>
+</head>
+<body>
+<script>
+    let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 9, 8, 7, 6, 5, 4, 3, 2, 1, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+    let cout = 0;
+    let check;
+    let value = prompt("Nhap phan tu muon tim ");
+    for (let i = 0; i < array.length; i++) {
+        if (value == array[i]) {
+            check = true;
+            cout = cout + 1;
+        } else {
+            check = false
+        }
+    }
+    if (check == true) {
+        alert("So " + value + " xuat hien " + cout + " lan");
+    } else {
+        alert("So " + value + " khong co trong day");
+    }
+</script>
+</body>
+</html>
