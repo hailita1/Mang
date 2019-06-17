@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game Đoán Số</title>
+</head>
+<body>
+<script>
+    let array = [10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
+    // document.write(array.sort());
+    let value = parseInt(prompt("Nhap so muon tim:"));
+
+    function linearSearch(arr, value) {
+        for (let i = 0; i < arr.length; i++) {
+            if (value === arr[i]) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    function binarySearch(left,right,array,value){
+        let mid = parseInt(left + (right - 1) / 2);
+        if (array[mid] === value) return mid;
+        if (array[mid] > value) return binarySearch(left,mid-1,array,value);
+        else{
+            return binarySearch(mid+1,right,array,value);
+        }
+    }
+    let check1 = linearSearch(array, value);
+    alert(check1);
+    let check2 = binarySearch(0,array.length-1, array, value);
+    alert(check2);
+
+</script>
+</body>
+</html>
